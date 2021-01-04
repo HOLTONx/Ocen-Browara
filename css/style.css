@@ -1,0 +1,23 @@
+header {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+}
+
+.nav-item {
+    padding-right: 15px;
+}
+
+.navbar {
+    background-color: #d4a900;
+}
+
+.navbar-brand {
+    font-size: 35px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.navbar-brand span {
+    color: #636159;
+    font-weight: 500;
+}
