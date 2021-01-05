@@ -1,4 +1,4 @@
-header {
+body {
     font-family: 'Lato', sans-serif;
     font-size: 20px;
 }
@@ -20,4 +20,15 @@ header {
 .navbar-brand span {
     color: #636159;
     font-weight: 500;
+}
+
+.service {
+    background: url(/images/strona_glowna.png) center;
+}
+
+.service .one {
+    background: #d4a900;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-radius: 80px;
 }
