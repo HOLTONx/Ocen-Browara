@@ -1,0 +1,11 @@
+/*////////////////////////////////*/
+/*//////////////LIST//////////////*/
+/*////////////////////////////////*/
+
+.list {
+    height: 800px;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
