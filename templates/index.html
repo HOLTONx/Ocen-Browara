@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Czcionka -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='scroll.css') }}" type="text/css" />
+    <title>Oceń Browara</title>
+</head>
+<body>
+
+
+  
+  <!-- Header -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #d4a900;">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="/">
+                <img src="{{ url_for('static', filename='images/logo_białe.png') }}" height="35" class="d-flex align-middle" alt="ocenbrowara.pl">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse
+               justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Strona Główna</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/ranking">Ranking</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/dodaj-piwo">Dodaj Piwo</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/kontakt">Kontakt</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <!-- Content -->
+    <section class="service pt-5" style="background-image: url( {{ url_for('static', filename='images/strona_glowna.png') }} ">
+        <div class="row mx-auto justify-content-center align-items-center text-center">
+          {% for res in results %}
+          <div class="one col-lg-3 col-md-3 col-7 m-5 m-md-3">
+            <h3>Miejsce {{ loop.index }}</h3>
+            <img class="img-fluid w-75" src="{{ url_for('static', filename='images/'+res[5] ) }}" alt="{{ res[5] }}">
+            <h5>{{ res[1] }}</h5>
+            <p>Alkohol: {{ res[2] }} <br/>Browar: {{ res[3] }}</p>
+          </div>
+          {% endfor %}
+
+        </div>
+      <!-- //// SCROLL //// -->
+      <div class= "col-12 d-none d-lg-block pb-5" style="position: static; bottom: 0;">
+        <section id="section04" class="demo">
+            <a href="#draw"><span></span>Przewiń</a>
+        </section>
+    </div>
+
+    </section>
+
+
+    <section class="draw" id="draw">
+      <div class="col mx-auto align-items-center my-5">
+        <div class="row title col-sm-12 align-items-center">
+          <h1>Spróbuj czegoś nowego:</h1>
+        </div>
+        <div class="row mx-auto mt-5">
+          <div class="col-sm-12 col-md-6 align-items-center justify-content-center text-center">
+            <div class="one w-50 mx-auto py-5">
+              <img class="img-fluid w-50" src="{{ url_for('static', filename='images/'+ran[5]) }}" alt="piwo butelkowe">
+            <h5>{{ ran[1] }}</h5>
+            <p>Alkohol: {{ ran[2] }} <br/>Browar: {{ ran[3] }}</p>
+            </div>
+            <div class="align-items-center justify-content-center text-center my-5">
+              <button type="button" class="btn btn-secondary w-50 mx-auto">Wylosuj sobie browara !</button>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 d-flex align-items-center justify-content-center text-center mb-5">
+            <div class="one mx-auto px-5 py-4 " >
+              <h2>Browar: {{ ran[3] }}</h2>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis unde ipsa esse odit hic fuga dolores sed recusandae, cum quos doloribus iure saepe assumenda mollitia tempora iusto, illum ipsum? Quibusdam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis hic mollitia veritatis consectetur quidem temporibus facilis fugiat rem quisquam nisi explicabo quae, tempora debitis voluptatem sint autem itaque est minima. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit harum rerum provident fugiat accusamus delectus! Debitis, tempore autem quam consequuntur quas laborum mollitia blanditiis, a deserunt quidem ea libero quia.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- Footer -->
+    <footer class="footer bg-dark text-center text-lg-start">
+      <div class="text-center p-3">
+        <img src="{{ url_for('static', filename='images/PK_SYMETRYCZNE_RGB_EN.png') }}" alt="Logo Pk">
+        Autorzy: Bartłomiej Szpetko, Tomasz Górnicki, Jakub Duda
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+</body>
+</html>
