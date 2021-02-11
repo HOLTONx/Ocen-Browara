@@ -62,7 +62,7 @@ def addNew():
         )
 
         data = request.form
-        q = 'INSERT INTO browary (typ, browar, alkohol) values("' + data['name'] + '","' + data['company'] + '","' + data['alcohol'] + '")'
+        q = 'INSERT INTO browary (typ, browar, alkohol) values("' + data['company'] + '","' + data['name'] + '","' + data['alcohol'] + '")'
         mycursor = mydb.cursor()
         mycursor.execute(q)
         mydb.commit()
