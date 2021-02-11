@@ -16,7 +16,7 @@ https://www.youtube.com/watch?v=EskaAXety0w
 
 Wstęp 
 
-Strona powstała przy użyciu technologii HTML, CSS z biblioteką Bootstrap, JavaScript, Python z frameworkiem Flask oraz MySQL. Głównym założeniem projektu było stworzenie strony internetowej, której grupą docelową byli by pełnoletni ludzie chcący wyrazić swoją opinię na temat danego piwa. Strona pozwala użytkownikowi na sprawdzenie informacji o różnych piwach, zobaczyć gdzie dane piwo plasuje się w rankingu stworzonym na podstawie głosów użytkowników gdzie oczywiście sam również może zagłosować.
+Strona powstała przy użyciu technologii HTML, CSS z biblioteką Bootstrap, Python z frameworkiem Flask oraz MySQL. Głównym założeniem projektu było stworzenie strony internetowej, której grupą docelową byli by pełnoletni ludzie chcący wyrazić swoją opinię na temat danego piwa. Strona pozwala użytkownikowi na sprawdzenie informacji o różnych piwach, zobaczyć gdzie dane piwo plasuje się w rankingu stworzonym na podstawie głosów użytkowników gdzie oczywiście sam również może zagłosować.
 
 Budowa strony
 
