@@ -104,6 +104,18 @@ body {
     color: #ffffff;
     font-size: 20px;;
 }
+
+@media (max-width: 766px) {
+    .kwadracik{
+        margin-bottom: 48px;
+    }
+}
+@media (min-width: 767px) {
+    .kwadracik{
+        margin-bottom: 0px;
+    }
+}
+
 /*/////////////////////////////////*/
 /*/////////////FOOTER//////////////*/
 /*/////////////////////////////////*/
